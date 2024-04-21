@@ -1,4 +1,6 @@
+import { auth } from "@/auth";
 import { Metadata } from "next";
+import { redirect } from "next/navigation";
 import SettingsPage from "./SettingsPage";
 
 export const metadata: Metadata = {
@@ -6,7 +8,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  // TODO: Protect this page via authentication
+  const session = await auth();
+  const user = session?.user;
 
-  return <SettingsPage />;
+  if (!user) {
+    redirect("/api/auth/signin?callbackUrl=/settings");
+  }
+
+  return <SettingsPage user={user} />;
 }
