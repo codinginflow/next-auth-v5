@@ -22,9 +22,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Google,
     GitHub,
-    Resend({
-      from: "no-reply@tutorial.codinginflow.com",
-    }),
+    // Resend({
+    //   from: "no-reply@tutorial.codinginflow.com",
+    // }),
   ],
 });
 
