@@ -51,7 +51,7 @@ export default async function Page({ params: { id } }: PageProps) {
         {user?.name || `User ${id}`}
       </h1>
       <p className="text-muted-foreground">
-        User since {new Date(user.createdAt).toLocaleDateString()}
+        User since: {new Date(user.createdAt).toLocaleDateString()}
       </p>
     </div>
   );
