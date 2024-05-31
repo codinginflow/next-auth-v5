@@ -36,7 +36,8 @@ model Post {
   title       String?
   details     String?
 
-  user User @relation(fields: [postId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

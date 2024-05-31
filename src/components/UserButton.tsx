@@ -1,5 +1,5 @@
 import avatarPlaceholder from "@/assets/images/avatar_placeholder.png";
-import { Lock, LogOut, Settings } from "lucide-react";
+import { Lock, LogOut, Settings, Edit3 } from "lucide-react";
 import { User } from "next-auth";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
@@ -47,7 +47,15 @@ export default function UserButton({ user }: UserButtonProps) {
             <DropdownMenuItem asChild>
               <Link href="/admin">
                 <Lock className="mr-2 h-4 w-4" />
-                Admin
+                <span>Admin</span>
+              </Link>
+            </DropdownMenuItem>
+          )}
+          {user.role === "contributor" && (
+            <DropdownMenuItem asChild>
+              <Link href="/contributor">
+                <Edit3 className="mr-2 h-4 w-4" />
+                <span>Contributor</span>
               </Link>
             </DropdownMenuItem>
           )}
