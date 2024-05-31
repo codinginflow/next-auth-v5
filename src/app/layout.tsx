@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Next-Auth V5 Tutorial",
-    absolute: "Next-Auth V5 tutorial",
+    template: "%s | JBlogs",
+    absolute: "JBlogs",
   },
   description:
-    "Learn how to use Auth.js v5 in Next.js with custom roles, caching, and more!",
+    "Find more personalized ideas, information, and stories",
 };
 
 export default function RootLayout({
