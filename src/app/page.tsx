@@ -21,11 +21,11 @@ export default async function Home() {
               title={post.title ?? ""}
               details={post.details ?? ""}
             />
-            {/* <Link href={`/post/${post.postId}`} className="hover:underline">
+            <Link href={`/post/${post.postId}`} className="hover:underline">
               <p className="text-blue-500 hover:text-blue-700">{post.title}</p>
             </Link>
-            <div className="text-gray-600">Posted by: {post.user.email}</div>
-            <div className="text-gray-600">Created at: {new Date(post.createdAt).toLocaleString()}</div> */}
+            <div className="text-gray-600">Posted by: {post.user.name}</div>
+            <div className="text-gray-600">Created at: {new Date(post.createdAt).toLocaleString()}</div>
           </li>
         ))}
       </ul>
