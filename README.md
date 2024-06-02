@@ -13,4 +13,6 @@ Topics I cover:
 - Static caching
 - And more
 
+- Something
+
 ![thumbnail](https://github.com/codinginflow/next-auth-v5/assets/52977034/99f6ae1c-b58e-46f2-adc6-fcc5ceeadaf2)
